@@ -9,6 +9,8 @@ export default class Ground {
         const path = Matter.Svg.pathToVertices(svgpath)
         this.body = Matter.Bodies.fromVertices(x, y, path)
         this.body.isStatic = true 
+        this.body.friction = 0
+        this.body.frictionStatic = 0
         // debugger 
         Matter.World.add(this.world, this.body)
     }
