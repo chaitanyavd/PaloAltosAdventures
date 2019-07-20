@@ -10,8 +10,8 @@ export default class Game {
         this.engine = Matter.Engine.create(); 
         this.world = this.engine.world
         this.animate = this.animate.bind(this)
-        this.ground = new Ground(500, 500, 400, 1200, this.engine, this.world)
-        this.player = new Player(500, 50, 45, this.engine, this.world)
+        this.ground = new Ground(9000, 6000, this.engine, this.world)
+        this.player = new Player(330, 0, 45, this.engine, this.world)
 
 
         window.stopAnimation = this.stopAnimation.bind(this); 

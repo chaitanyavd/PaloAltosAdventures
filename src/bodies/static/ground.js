@@ -2,7 +2,7 @@ import Matter from 'matter-js';
 window.path = document.createElementNS("http://www.w3.org/2000/svg", "path");
 
 export default class Ground {
-    constructor(x, y, w, h, engine, world) {
+    constructor(x, y, engine, world) {
         this.world = world; 
         this.engine = engine; 
         const svgpath = document.querySelector("#slope")
@@ -11,23 +11,13 @@ export default class Ground {
         this.body.isStatic = true 
         this.body.friction = 0
         this.body.frictionStatic = 0
-        // debugger 
+        // debugger
         Matter.World.add(this.world, this.body)
     }
 
-    // getHeight(body) {
-    //     return body.vertices[3].y - body.vertices[0].y
-    // }
-    // getWidth(body) {
-    //     return body.vertices[2].x - body.vertices[0].x
-    // }
 
     draw(ctx) {
         const pos = this.body.position; 
-
-
-
-
         this.body.parts.slice(1).forEach((part)=>{
             ctx.beginPath(); 
             const vertices = part.vertices

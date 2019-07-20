@@ -10,6 +10,7 @@ export default class Player {
         this.body.friction = 0
         this.body.frictionStatic = 0
         this.body.mass = 1
+        this.body.restitution = 0.5
         // debugger 
         Matter.World.add(this.world, this.body)
     }
