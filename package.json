@@ -1,0 +1,24 @@
+{
+  "name": "PaloAltosAdventures",
+  "version": "1.0.0",
+  "description": "* Palo Alto's Adventure",
+  "main": "webpack.config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chaitanyavd/PaloAltosAdventures.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/chaitanyavd/PaloAltosAdventures/issues"
+  },
+  "homepage": "https://github.com/chaitanyavd/PaloAltosAdventures#readme",
+  "dependencies": {
+    "matter-js": "^0.14.2",
+    "poly-decomp": "^0.3.0"
+  }
+}

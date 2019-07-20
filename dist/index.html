@@ -4,9 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="../src/libraries/pathseg.js"></script> 
+    <script src="../src/libraries/polydecomp.js"></script>
+    <script src = "./main.js"></script>
     <title>Palo Alto's Adventures</title>
 </head>
 <body>
-    
+
+    <svg width = "300" height = "300" display = "none">
+        <path id="slope" d="M0 27.16L0 447.16L640 447.16L640 288.79L400 279.57L140 175.32L18.58 47.16L0 27.16Z" fill="red">
+        </path>
+    </svg>
+   
+    <canvas id = "game-canvas"></canvas>
 </body>
 </html>
+
