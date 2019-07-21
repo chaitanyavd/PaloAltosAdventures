@@ -11,9 +11,8 @@ export default class Game {
         this.world = this.engine.world
         this.animate = this.animate.bind(this)
         this.ground = new Ground(9000, 6000, this.engine, this.world)
+
         this.player = new Player(330, 0, 45, this.engine, this.world)
-
-
         window.stopAnimation = this.stopAnimation.bind(this); 
         this.animate(); 
 
@@ -24,7 +23,8 @@ export default class Game {
         this.ctx.save()
         const {x,y} = this.player.body.position
         this.ctx.translate(-x + Game.WIDTH / 2, -y + Game.HEIGHT / 2)
-        this.ctx.fillStyle = "blue"
+        this.ctx.fillStyle = "red"
+        // this.ctx.fillRect(x - Game.WIDTH / 2, y - Game.HEIGHT / 2, Game.WIDTH, Game.HEIGHT)
         this.ctx.fillRect(x - Game.WIDTH / 2, y - Game.HEIGHT / 2, Game.WIDTH, Game.HEIGHT)
         this.ground.draw(this.ctx)
         this.player.draw(this.ctx)

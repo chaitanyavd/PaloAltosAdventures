@@ -6,13 +6,19 @@ export default class Ground {
         this.world = world; 
         this.engine = engine; 
         const svgpath = document.querySelector("#slope")
+
         const path = Matter.Svg.pathToVertices(svgpath)
+
         this.body = Matter.Bodies.fromVertices(x, y, path)
+
+
         this.body.isStatic = true 
         this.body.friction = 0
         this.body.frictionStatic = 0
+
         // debugger
         Matter.World.add(this.world, this.body)
+
     }
 
 
@@ -31,20 +37,14 @@ export default class Ground {
             ctx.closePath(); 
             ctx.fillStyle = "black"
             ctx.fill()
-            // ctx.stroke()
-            // debugger
+
         })
-        // ctx.moveTo(this.body.position.x, this.body.position.y); 
-        // ctx.lineTo(this.body.vertices[1].x, this.body.vertices[1].y); 
-        // ctx.lineTo(this.body.vertices[2].x, this.body.vertices[2].y);
-        // ctx.closePath();  
-        // ctx.fill(); 
-        
+
+
 
     }
 
-    // svg() {
-    //     const 
-    // }
-    
+
 }
+
+

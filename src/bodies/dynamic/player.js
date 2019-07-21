@@ -6,15 +6,11 @@ export default class Player {
     constructor(x, y, r, engine, world) {
         this.world = world;
         this.engine = engine;
-        this.body = Matter.Bodies.circle(x, y, r);
-        this.body.friction = 0
-        this.body.frictionStatic = 0
-        this.body.mass = 1
-        this.body.restitution = 0.5
+        this.body = Matter.Bodies.circle(x, y, r, {friction: 0, frictionStatic: 0, mass: 1, restitution: 0.5 });
         // debugger 
         Matter.World.add(this.world, this.body)
     }
-
+ 
     draw(ctx) {
         const pos = this.body.position;
 
@@ -28,7 +24,7 @@ export default class Player {
         ctx.closePath();
         ctx.stroke()
 
-        ctx.fill();
+        // ctx.fill();
     }
 
 
